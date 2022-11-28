@@ -1,8 +1,5 @@
 const container = document.getElementById("container");
 
-
-
-
 function addGrid() {
 
     for (let i = 0; i < 257; i++) {
@@ -16,3 +13,15 @@ function addGrid() {
 }
 
 addGrid();
+
+document.querySelectorAll(".grid").forEach(item => {
+    item.addEventListener("mouseover", event => {
+        event.target.className = "hover";
+
+    
+    item.addEventListener("mouseout", event => {
+        event.target.className = "grid";
+    });
+    });
+});
+
