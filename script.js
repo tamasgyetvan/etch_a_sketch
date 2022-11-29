@@ -15,16 +15,19 @@ function addGrid(size) {
     }
 
 }
-addGrid();
 
-document.querySelectorAll(".grid-item").forEach(item => {
-    item.addEventListener("mouseover", event => {
-        event.target.className = "hover";
-
+function addMouseOverEffect() {
+    document.querySelectorAll(".grid-item").forEach(item => {
+        item.addEventListener("mouseover", event => {
+            event.target.className = "hover";
     
-    
+        
+        
+        });
     });
-});
+}
+
+
 
 
 function clearGrid() {
@@ -44,5 +47,6 @@ document.getElementById("addGridBtn").onclick = function() {
     let gridSize = prompt("Please enter the size of the grid (nxn):");
     clearGrid();
     addGrid(gridSize);
+    addMouseOverEffect();
 
 }
