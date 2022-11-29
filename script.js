@@ -36,6 +36,14 @@ function clearCurrentGrid() {
         
     };
 
+function removeCurrentGrid() {
+
+    while (container.firstChild) {
+        container.removeChild(container.firstChild)
+    };
+}
+
+
 
 document.getElementById("clearGridBtn").onclick = function() {
     clearCurrentGrid();
@@ -43,7 +51,8 @@ document.getElementById("clearGridBtn").onclick = function() {
 
 document.getElementById("changeGridBtn").onclick = function() {
     gridSize = prompt("Please enter the size of the grid (nxn):");
-    clearCurrentGrid();
+    /**Removes all child elements of container*/
+    removeCurrentGrid();
     addGrid(gridSize);
     addMouseOverEffect();
     console.log(gridSize);
