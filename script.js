@@ -2,11 +2,11 @@ const container = document.getElementById("container");
 
 function addGrid() {
 
-    for (let i = 0; i < 257; i++) {
+    for (let i = 0; i < 256; i++) {
 
         const content = document.createElement("div");
-        content.classList.add("grid");
-        container.appendChild(content);       
+        content.classList.add("grid-item");
+        container.appendChild(content);     
         
     }
 
@@ -14,14 +14,25 @@ function addGrid() {
 
 addGrid();
 
-document.querySelectorAll(".grid").forEach(item => {
+document.querySelectorAll(".grid-item").forEach(item => {
     item.addEventListener("mouseover", event => {
         event.target.className = "hover";
 
     
-    item.addEventListener("mouseout", event => {
-        event.target.className = "grid";
-    });
+    
     });
 });
 
+
+function clearGrid() {
+
+    while (container.firstChild) {
+        container.removeChild(container.firstChild)
+    }
+    
+
+}
+
+document.getElementById("clearGridBtn").onclick = function() {
+    clearGrid();
+}
