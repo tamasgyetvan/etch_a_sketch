@@ -1,8 +1,12 @@
 const container = document.getElementById("container");
 
-function addGrid() {
+function addGrid(size) {
+    
 
-    for (let i = 0; i < 256; i++) {
+    container.style.gridTemplateColumns = (`repeat(${size}, 1fr)`);
+    container.style.gridTemplateRows = (`repeat(${size}, 1fr)`);
+    let numberOfGridItem = size*size;
+    for (let i = 0; i < numberOfGridItem; i++) {
 
         const content = document.createElement("div");
         content.classList.add("grid-item");
@@ -11,7 +15,6 @@ function addGrid() {
     }
 
 }
-
 addGrid();
 
 document.querySelectorAll(".grid-item").forEach(item => {
@@ -35,4 +38,11 @@ function clearGrid() {
 
 document.getElementById("clearGridBtn").onclick = function() {
     clearGrid();
+}
+
+document.getElementById("addGridBtn").onclick = function() {
+    let gridSize = prompt("Please enter the size of the grid (nxn):");
+    clearGrid();
+    addGrid(gridSize);
+
 }
