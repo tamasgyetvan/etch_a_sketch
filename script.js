@@ -1,20 +1,20 @@
 const container = document.getElementById("container");
+let gridSize = 16;
 
-function addGrid(size) {
-    
+function addGrid(size) {    
 
     container.style.gridTemplateColumns = (`repeat(${size}, 1fr)`);
     container.style.gridTemplateRows = (`repeat(${size}, 1fr)`);
     let numberOfGridItem = size*size;
+
     for (let i = 0; i < numberOfGridItem; i++) {
 
         const content = document.createElement("div");
         content.classList.add("grid-item");
         container.appendChild(content);     
         
-    }
-
-}
+    };
+};
 
 function addMouseOverEffect() {
     document.querySelectorAll(".grid-item").forEach(item => {
@@ -25,28 +25,31 @@ function addMouseOverEffect() {
         
         });
     });
-}
+};
 
-
-
-
-function clearGrid() {
-
+function clearCurrentGrid() {
     while (container.firstChild) {
         container.removeChild(container.firstChild)
     }
-    
-
-}
-
-document.getElementById("clearGridBtn").onclick = function() {
-    clearGrid();
-}
-
-document.getElementById("addGridBtn").onclick = function() {
-    let gridSize = prompt("Please enter the size of the grid (nxn):");
-    clearGrid();
     addGrid(gridSize);
     addMouseOverEffect();
+        
+    };
 
-}
+
+document.getElementById("clearGridBtn").onclick = function() {
+    clearCurrentGrid();
+};
+
+document.getElementById("changeGridBtn").onclick = function() {
+    gridSize = prompt("Please enter the size of the grid (nxn):");
+    clearCurrentGrid();
+    addGrid(gridSize);
+    addMouseOverEffect();
+    console.log(gridSize);
+
+};
+
+addGrid(gridSize);
+addMouseOverEffect();
+console.log(gridSize);
