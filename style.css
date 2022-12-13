@@ -47,6 +47,8 @@
     border-style: solid;
 }
 
+
+
 #redButton {
     background-color: #ff0021;
 }
@@ -63,10 +65,6 @@
     background-color: #fbc93d;
 }
 
-#randomButton {
-    background: linear-gradient(45deg, #020024 0%, red 0%, #ffab00 12%, #c0ff00 24%,
-    #00ff08 36%, #00e4ff 48%, #0005ff 60%, #fe00e7 72%, red 84%, #ffa200 96%);
-    
-}
+
 
 
