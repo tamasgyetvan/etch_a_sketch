@@ -15,11 +15,29 @@
     background-color: rgba(255, 255, 255, 1);
 
 }
-
-.hover {
+/*Pre-defined hover colors, based on chosen color by user*/
+.redHover {
     
     border: 1px black solid;
-    background-color: aqua;
+    background-color: #ff0021;
+}
+
+.greenHover {
+    
+    border: 1px black solid;
+    background-color: #5cdb5c;
+}
+
+.blueHover {
+    
+    border: 1px black solid;
+    background-color: #6cc0e5;
+}
+
+.yellowHover {
+    
+    border: 1px black solid;
+    background-color: #fbc93d;
 }
 
 
