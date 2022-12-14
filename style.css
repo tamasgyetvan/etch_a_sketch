@@ -1,3 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+
+* {
+    font-family: "Varela Round", Helvetica, sans-serif;
+    color: white;
+}
+
+html {
+    height: 100%;
+    background-image: linear-gradient(#de6262, #ffb88c);
+}
+
+body {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: white;
+    font-style: italic;
+}
+
+#gridButtons>button {
+    border: 2px solid gray;
+    border-radius: 10px; 
+    background-color: #5cdb5c;
+    width: 150px;
+    margin-bottom: 15px;
+
+}
 #container {
 
     display: grid;
@@ -41,10 +75,17 @@
 }
 
 
+
+h4 {
+
+    text-align: center;
+}
+
 #colorPicker button {
     padding: 15px;
     border-radius: 10px;
     border-style: solid;
+
 }
 
 
